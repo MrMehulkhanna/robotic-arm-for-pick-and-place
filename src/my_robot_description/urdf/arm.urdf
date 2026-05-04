@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot name="arm">
+<link name="world_link"/>
+<link name="base_link"><visual><geometry><cylinder radius="0.08" length="0.15"/></geometry></visual></link>
+<joint name="fix" type="fixed"><parent link="world_link"/><child link="base_link"/></joint>
+<link name="link1"><visual><origin xyz="0.15 0 0"/><geometry><box size="0.3 0.04 0.04"/></geometry></visual></link>
+<joint name="j1" type="revolute"><parent link="base_link"/><child link="link1"/><axis xyz="0 0 1"/><limit lower="-3.14" upper="3.14"/></joint>
+<link name="link2"><visual><origin xyz="0.15 0 0"/><geometry><box size="0.3 0.04 0.04"/></geometry></visual></link>
+<joint name="j2" type="revolute"><parent link="link1"/><child link="link2"/><origin xyz="0.3 0 0"/><axis xyz="0 1 0"/></joint>
+<link name="gripper"><visual><origin xyz="0.05 0 0"/><geometry><box size="0.1 0.05 0.05"/></geometry></visual></link>
+<joint name="j3" type="revolute"><parent link="link2"/><child link="gripper"/><origin xyz="0.3 0 0"/><axis xyz="0 1 0"/></joint>
+<link name="cube"><visual><origin xyz="0.4 0.2 0.04"/><geometry><box size="0.08 0.08 0.08"/></geometry></visual></link>
+<joint name="cube_joint" type="fixed"><parent link="world_link"/><child link="cube"/></joint>
+<link name="zone"><visual><origin xyz="0.2 -0.2 0"/><geometry><box size="0.15 0.15 0.01"/></geometry></visual></link>
+<joint name="zone_joint" type="fixed"><parent link="world_link"/><child link="zone"/></joint>
+</robot>
