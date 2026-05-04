@@ -64,3 +64,4 @@ Feel free to fork this project and add your own inverse kinematics, MoveIt2 inte
 
 ---
 *Built with ❤️ using ROS2.*
+# robotic-arm-for-pick-and-place
