@@ -10,13 +10,12 @@ Welcome to the **Robotic Arm** project! This ROS2 package contains a lightweight
 
 ![Robotic Arm Pick & Place](image.png)
 
-*(Note: Replace `image.png` in the repository with your uploaded image showing the arm picking and placing the block!)*
 
 ## ✨ Features
 
 - 🏗️ **Custom URDF Model**: A fully defined robotic arm with revolute joints (`link1`, `link2`, `gripper`).
 - 🎯 **Smooth Trajectories**: A Python-based joint state publisher orchestrates the arm's movement using trigonometric interpolation for seamless sweeps.
-- 👁️ **RViz2 Integration**: Beautiful, real-time visualization of the arm, the workspace, and the target object directly in RViz.
+- 👁️ **RViz2 Integration**: Real-time visualization of the arm, the workspace, and the target object directly in RViz.
 - 🚀 **Plug & Play Launch**: Single-command bringup for the entire simulation stack.
 
 ## 📁 Project Structure
